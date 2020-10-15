@@ -50,7 +50,6 @@ int fibonacci_iterative(int index)
         return index;
     }
 
-
     for (int i = 2; i < index; i++)
     {
         int temp = a + b;
@@ -62,7 +61,15 @@ int fibonacci_iterative(int index)
 }
 
 
+int fibonacci_recursive(int index)
+{
+    if (index < 2)
+    {
+        return index;
+    }
 
+    return fibonacci_recursive(index-2) + fibonacci_recursive(index-1);
+}
 
 
 
@@ -107,8 +114,9 @@ int main()
     int index = readInt();
 
     int result1 = fibonacci_iterative(index);
+    int result2 = fibonacci_recursive(index);
 
-    cout << "The result is: " << result1 << endl;
+    cout << "The result is: " << result2 << endl;
 
 
     return 0;
