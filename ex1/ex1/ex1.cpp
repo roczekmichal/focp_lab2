@@ -40,6 +40,36 @@ int pow(int base, int power)
 }
 
 
+int fibonacci_iterative(int index)
+{
+    int a = 0;
+    int b = 1;
+
+    if (index == 0 || index == 1)
+    {
+        return index;
+    }
+
+
+    for (int i = 2; i < index; i++)
+    {
+        int temp = a + b;
+        a = b;
+        b = temp; 
+    }
+
+    return b;
+}
+
+
+
+
+
+
+
+
+
+
 
 int main()
 {
@@ -61,13 +91,26 @@ int main()
     }
     */
 
+
+    //pow function
+
+    /*
     int base = readInt();
     int power = readInt();
 
     int result = pow(base, power);
 
     cout << "The result is: " << result<< endl;
-    
+    */
+
+
+    int index = readInt();
+
+    int result1 = fibonacci_iterative(index);
+
+    cout << "The result is: " << result1 << endl;
+
+
     return 0;
 }
 
