@@ -27,10 +27,29 @@ int readInt()
 }
 
 
+int pow(int base, int power)
+{
+    int result = 1;
+
+    for (int i = 0; i < power; i++)
+    {
+        result *= base;
+    }
+
+    return result;
+}
+
+
 
 int main()
 {
+
+
+    //isPrime and readInt functions
+
+    /*
     int number = readInt();
+   
     
     if (isPrime(number))
     {
@@ -40,7 +59,14 @@ int main()
     {
         cout << "Your number is not prime" << endl;
     }
+    */
 
+    int base = readInt();
+    int power = readInt();
+
+    int result = pow(base, power);
+
+    cout << "The result is: " << result<< endl;
     
     return 0;
 }
