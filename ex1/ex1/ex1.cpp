@@ -3,8 +3,6 @@
 using namespace std;
 
 
-
-
 bool isPrime(int n) 
 {
     for (int i = 2; i < n/2; i++)
@@ -18,14 +16,21 @@ bool isPrime(int n)
     return true;
 }
 
-
-
-int main()
+int readInt()
 {
     int number;
 
     cout << "Please introduce your number: " << endl;
     cin >> number;
+
+    return number;
+}
+
+
+
+int main()
+{
+    int number = readInt();
     
     if (isPrime(number))
     {
